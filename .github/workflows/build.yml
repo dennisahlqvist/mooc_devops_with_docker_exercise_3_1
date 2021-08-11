@@ -1,4 +1,4 @@
-name: Release DevOps with Docker
+name: Release DevOps with Docker Exercise 3.1
 
 on:
   push:
