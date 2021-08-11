@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      - uses: jctaveras/heroku-deploy@v1.0.0 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "dennisahlqvist-docker-mooc-3-1" #Must be unique in Heroku
           heroku_email: ${{secrets.HEROKU_EMAIL}}
+          dockerfile_path: '.' # set the path to the folder where the Dockerfile is located
+          options: '' # Docker Build Options
+          formation: 'web' # Docker Dyno Formation. By default is web
